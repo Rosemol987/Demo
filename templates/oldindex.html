@@ -1,0 +1,36 @@
+
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <link rel="stylesheet" href="{% static '/css/style.css'%}"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <h1> <u>Welcome to our site</u> </h1>
+        <a href="">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="about">About</a>
+        <h1> Name is{{name}}</h1>
+        <h1> Age is {{age}}</h1>
+        <h1> Place is{{place}}</h1>
+        {% if age > 18 %}
+       <h2> eligible</h2>
+        {% elif age < 18 %} 
+        <h2> Not Eligible </h2>
+         {% endif %}
+         {% for i in 'DJANGO' %}
+         <h2>{{ i }}</h2>
+         {% endfor %}
+        
+        <script src="" async defer></script>
+    </body>
+</html>
